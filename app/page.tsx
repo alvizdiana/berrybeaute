@@ -1,65 +1,67 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const images = [
+    "/hero-1.jpg",
+    "/hero-2.jpg",
+    "/hero-3.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Ganti gambar setiap 5 detik
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        {/* Background Container */}
+        <div className="absolute inset-0 z-0">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+                index === currentIndex ? "opacity-100 animate-slow-zoom" : "opacity-0"
+              }`}
+              style={{ backgroundImage: `url('${img}')` }}
+            />
+          ))}
+        </div>
+
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair">
+            GENHERBA
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg md:text-xl mb-8 font-montserrat">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis modi magnam qui suscipit recusandae iusto ad quam praesentium veritatis distinctio.
+          </p>
+          <div className="flex justify-center gap-4">
+            <button className="bg-[#50C878] hover:bg-[#3ea862] text-white py-2 px-4 rounded-full transition duration-300">
+              Explore Products
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-black py-2 px-4 rounded-full transition duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        {/* About Company */}
+        <div className="text-center text-black px-14 mt-16">
+          <h2 className="text-3xl font-bold mb-4 font-playfair">About Company</h2>
+          <p className="text-lg font-montserrat">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum modi, dolor impedit, fugiat illum ad maiores tenetur minus deleniti aspernatur veniam, molestiae numquam quisquam commodi omnis laboriosam natus ipsam autem officia. Animi omnis eum eius ducimus enim vero, doloremque voluptates maiores dicta quas alias. Minus laboriosam voluptatum architecto quas quae numquam ex aperiam eveniet possimus laborum impedit vitae nihil similique et dolorum, quasi quo distinctio quis eaque provident cum libero. Sed quae consectetur nihil aliquid ullam pariatur voluptatibus perferendis odit! Praesentium dolores qui corrupti, veritatis corporis ut similique doloremque quidem, ducimus, quas earum voluptates. Earum reprehenderit beatae a ipsa?
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
