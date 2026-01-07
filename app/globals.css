@@ -3,7 +3,8 @@
 
 @theme {
     --primary-color:#50C878;
-    --secondary-color:#FFD700;
+    --secondary-color:#D4AF37;
+    --additional-color:#FFFDD0;
 
     --font-playfair: 'Playfair Display', serif;
     --font-montserrat: 'Montserrat', sans-serif;
