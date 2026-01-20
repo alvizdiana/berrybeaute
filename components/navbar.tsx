@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,21 +21,30 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    <nav className={`py-2 px-5 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? "bg-(--primary-color)/70 backdrop-blur-md shadow-md" 
-          : "bg-transparent"
-      }`}
-      >
-      <div className="font-montserrat text-xl text-white">Genherba</div>
-      <div className="flex space-x-4 font-montserrat">
-        <a href="/" className="rounded-full text-white hover:underline hover:underline-offset-2 px-4 py-2 transition-colors duration-300">Overview</a>
-        <a href="/about" className="rounded-full text-white hover:underline hover:underline-offset-2 px-4 py-2 transition-colors duration-300">About</a>
-        <a href="/artikel" className="rounded-full text-white hover:underline hover:underline-offset-2 px-4 py-2 transition-colors duration-300">Artikel</a>
-        <a href="/katalog" className="rounded-full text-white hover:underline hover:underline-offset-2 px-4 py-2 transition-colors duration-300">Katalog</a>
+        ? "bg-(--additional-color)/70 backdrop-blur-md shadow-md"
+        : "bg-(--additional-color)/60 backdrop-blur-md shadow-md" 
+      }`}>
+      <div>
+        <img src="/berrybeaute_full.png" alt="BerryBeaute logo" className="w-30"/>
       </div>
-      <div className="font-montserrat">
-        <a href="/contact" className="bg-(--secondary-color) text-(--additional-color) hover:bg-(--additional-color) hover:text-(--secondary-color) px-4 py-2 rounded-full transition-colors duration-300">Kontak Kami</a>
+      <div className="flex space-x-4 font-montserrat items-center">
+        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/">
+          Overview
+          <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+        </a>
+        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/abour">
+          About
+          <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+        </a>
+        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/catalog">
+          Catalog
+          <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+        </a>
+      </div>
+      <div className="flex items-center font-montserrat">
+        <a href="/contact" className="bg-(--primary-color) text-(--additional-color) rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-4 py-2">Contact Us</a>
       </div>
     </nav>
   )

@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-    --primary-color:#50C878;
-    --secondary-color:#D4AF37;
-    --additional-color:#FFFDD0;
+    --primary-color:#de5d83;
+    --secondary-color:#a17392;
+    --additional-color:#f5ebf1;
 
     --font-playfair: 'Playfair Display', serif;
     --font-montserrat: 'Montserrat', sans-serif;
