@@ -23,9 +23,9 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "[Twin Pack] Hydra Boost & Pure Glow Serum",
+    name: "Glass Skin Serum",
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto quaerat sint, exercitationem saepe illo delectus!.",
-    imageUrl: "/product-images/produk_abu_3.jpg",
+    imageUrl: "/product-images/skincare_1.jpg",
     buyBy: "1.000.000+"
   },
 ];

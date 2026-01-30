@@ -27,24 +27,24 @@ export default function Navbar() {
         : "bg-(--additional-color)/60 backdrop-blur-md shadow-md" 
       }`}>
       <div>
-        <img src="/berrybeaute_full.png" alt="BerryBeaute logo" className="w-30"/>
+        <img src="/berrybeaute_full.png" alt="BerryBeaute logo" className=" w-18 md:w-30"/>
       </div>
       <div className="flex space-x-4 font-montserrat items-center">
-        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/">
+        <a className="relative group text-sm md:text-base hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/">
           Overview
           <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
         </a>
-        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/abour">
-          About
+        <a className="relative group text-sm md:text-base hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/about">
+          About Us
           <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
         </a>
-        <a className="relative group hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/catalog">
+        <a className="relative group text-sm md:text-base hover:text-(--secondary-color) transition-colors ease-in-out duration-300" href="/catalog">
           Catalog
           <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
         </a>
       </div>
       <div className="flex items-center font-montserrat">
-        <a href="/contact" className="bg-(--primary-color) text-(--additional-color) rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-4 py-2">Contact Us</a>
+        <a href="/contact" className="bg-(--primary-color) text-(--additional-color) text-sm md:text-base rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-2 md:px-4 py-1 md:py-2">Contact Us</a>
       </div>
     </nav>
   )

@@ -14,12 +14,13 @@ export default function ProductSlide({ product }: ProductSlideProps) {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center p-4 bg-white shadow-lg max-w-4xl mx-auto my-8">
       {/* Bagian Kiri: Gambar Produk */}
-      <div className="relative w-full md:w-1/2 h-64 md:h-80">
+      <div className="relative w-full w- md:w-1/2 h-64 md:h-80">
         <Image
           src={product.imageUrl}
           alt={product.name}
           layout="fill"
-          objectFit="contain" 
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
         />
       </div>
 
