@@ -2,12 +2,20 @@
 @import "tailwindcss";
 
 @theme {
-    --primary-color:#de5d83;
-    --secondary-color:#a17392;
-    --additional-color:#f5ebf1;
+  --primary-color:#de5d83;
+  --secondary-color:#a17392;
+  --additional-color:#f5ebf1;
+  --active-color:#704b64;
+  
+  --font-playfair: 'Playfair Display', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
 
-    --font-playfair: 'Playfair Display', serif;
-    --font-montserrat: 'Montserrat', sans-serif;
+:root {
+  --primary-color:#de5d83;
+  --secondary-color:#a17392;
+  --additional-color:#f5ebf1;
+  --active-color:#704b64;
 }
 
 @layer utilities {

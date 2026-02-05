@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const collections = [
@@ -11,65 +11,85 @@ const collections = [
 
 export default function NewCollection() {
   const [activeIndex, setActiveIndex] = useState(0); // Mulai dari 0 agar gambar 1 di paling kiri
+  const containerRef = useRef(null);
 
   return (
-    <section className="py-16 overflow-hidden bg-white">
-      {/* Header */}
-      <div className="md:flex md:justify-between md:items-end mb-12 md:pr-10">
-        <div className="max-w-xl md:pl-10">
-          <h2 className="text-5xl font-playfair font-bold text-(--primary-color) mb-4">New Collection</h2>
-          <p className="text-gray-500 font-montserrat max-w-md">
-            Elevate your beauty routine with our range of stylish and minimalist products.
-          </p>
+    <div className="min-h-screen pt-5">
+      <section className="py-16 overflow-hidden bg-white">
+        {/* Header */}
+        <div className="md:flex md:justify-between md:items-end mb-12 md:pr-10">
+          <div className="max-w-xl md:pl-10">
+            <h2 className="text-4xl font-playfair font-bold text-(--primary-color) mb-4">New Collection</h2>
+            <p className="text-gray-500 font-montserrat max-w-md text-base">
+              Elevate your beauty routine with our range of stylish and minimalist products.
+            </p>
+          </div>
+          <button className="flex items-center gap-2 group mt-7 md:mt-0">
+            <a href="/catalog">
+              <span className="text-base bg-(--secondary-color) text-(--additional-color) hover:bg-(--secondary-color)/70 cursor-pointer px-6 py-1 rounded-full font-semibold">All collection</span>
+              <span className="text-2xl transition-transform group-hover:translate-x-2">→</span>
+            </a>
+          </button>
         </div>
-        <button className="flex items-center gap-2 group mt-7 md:mt-0">
-          <span className="bg-(--secondary-color) text-(--additional-color) hover:bg-(--secondary-color)/70 cursor-pointer px-6 py-2 rounded-full font-semibold">All collection</span>
-          <span className="text-2xl transition-transform group-hover:translate-x-2">→</span>
-        </button>
-      </div>
 
-      {/* Carousel Container */}
-      <div className="relative pl-0 md:pl-80 md:pr-30">
-        <div 
-          className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] gap-6"
-          // Logika geser: Jika index 0, tidak geser. Jika index 1, geser secukupnya.
-          style={{ transform: `translateX(-${activeIndex * 25}%)` }} 
-        >
-          {collections.map((item, index) => {
-            const isActive = index === activeIndex;
-            const isPast = index < activeIndex;
+        {/* Carousel Container */}
+        <div className="relative w-full overflow-hidden py-10">
+          <div 
+            className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] items-center"
+            style={{ 
+              transform: `translateX(calc(50% - (var(--item-width) / 2) - (${activeIndex} * var(--item-width))))`,
+              "--item-width": "60%", 
+            }}
+          >
+            <style jsx>{`
+              @media (min-width: 768px) {
+                div { --item-width: 30% !important; }
+              }
+            `}</style>
 
-            return (
+            {collections.map((item, index) => {
+              const isActive = index === activeIndex;
+              
+              return (
                 <div
-                    key={item.id}
-                    onClick={() => setActiveIndex(index)}
-                    className={`relative flex-none transition-all duration-700 cursor-pointer
-                    ${isActive ? "w-[75%] md:w-[50%]" : "w-[60%] md:w-[30%]"} 
-                    ${isPast ? "scale-95 opacity-50" : "scale-100 opacity-100"}
-                    `}
+                  key={item.id}
+                  onClick={() => setActiveIndex(index)}
+                  style={{ flex: "0 0 var(--item-width)" }}
+                  className={`relative transition-all duration-700 cursor-pointer px-2
+                    ${isActive ? "scale-110 z-10 opacity-100" : "scale-75 opacity-40"}
+                  `}
                 >
-                    {/* Image Card */}
-                    <div className="relative aspect-4/5 overflow-hidden flex items-center justify-center">
-                      <div className={`relative w-full h-full transition-transform duration-700 ${isActive ? 'scale-95' : 'scale-70'}`}>
-                        {item.discount && (
-                            <div className="absolute top-8 right-8 bg-white px-5 py-2 rounded-full shadow-sm font-bold text-sm">
-                            {item.discount}
-                            </div>
-                        )}
-                        <Image src={item.img} alt={item.name} fill className="object-contain" priority />
-                      </div>
+                  {/* Card Image */}
+                  <div className="relative aspect-4/5 flex items-center justify-center rounded-xl overflow-hidden">
+                    <div className={`absolute inset-0 transition-colors duration-700 ${isActive ? 'bg-transparent' : 'bg-gray-100/50'}`} />
+                    
+                    <div className="relative w-full h-full p-4">
+                      {item.discount && isActive && (
+                        <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md font-bold text-[10px] z-20">
+                          {item.discount}
+                        </div>
+                      )}
+                      <Image 
+                        src={item.img} 
+                        alt={item.name} 
+                        fill 
+                        className="object-contain" 
+                        priority 
+                      />
                     </div>
+                  </div>
 
-                    {/* Info - Tetap muncul agar tidak kosong, atau bisa disembunyikan jika tidak aktif */}
-                    <div className={`mt-6 transition-all duration-700 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}>
-                    <h3 className="text-xl font-semibold">{item.name}</h3>
-                    <p className="textbase font-bold mt-1 tracking-tighter">{item.price}</p>
-                    </div>
+                  {/* Info - Hanya muncul di bawah yang aktif */}
+                  <div className={`mt-8 text-center transition-all duration-500 transform ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}>
+                    <h3 className="font-montserrat text-sm md:text-xl font-semibold uppercase tracking-widest">{item.name}</h3>
+                    <p className="font-montserrat font-bold text-gray-900 mt-1">{item.price}</p>
+                  </div>
                 </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
