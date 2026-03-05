@@ -27,7 +27,10 @@ export default function Footer(){
                     <div className="mt-5 md:mt-0 md:w-1/4">
                         <h4 className="text-black text-base md:text-xl font-semibold font-playfair">Let's keep in touch!</h4>
                         <p className="text-gray-700 text-sm">Get 15% of your first order!</p>
-                        <input type="text" placeholder="Enter your email here.." className="mt-3 text-sm border focus:outline-(--secondary-color) border-(--secondary-color) bg-(--secondary-color)/20 pl-2 pr-13 py-1 rounded-xl"/>
+                        <div className="flex items-center mt-3 ">
+                            <input type="text" placeholder="Enter your email here.." className="text-sm border focus:outline-(--secondary-color) border-(--secondary-color) bg-(--secondary-color)/20 pl-2 pr-3 mr-3 py-1 rounded-xl"/>
+                            <a href="/contact" className="bg-transparent border border-(--secondary-color) text-(--secondary-color) text-sm rounded-full hover:bg-(--secondary-color) hover:text-(--additional-color) hover:border hover:border-(--secondary-color) transition-colors ease-in-out duration-300 px-2 py-1">Send <i className="fa-solid fa-paper-plane"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div className="text-center text-sm text-white mt-10 py-2 bg-(--secondary-color) font-montserrat">© 2024 Alvi Izdiana. All rights reserved.</div>

@@ -6,7 +6,7 @@ export default function Achievement(){
                 <h2 className="text-4xl font-playfair font-semibold text-(--primary-color) pt-7">2025 Achievement</h2>
                 </div>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 py-12 ">
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 py-12 cursor-pointer">
                 <div className="flex flex-col items-center gap-2 group">
                 <img src="/badge/badge_1.png" alt="Most Trusted Brand 2025" className="h-28 grayscale group-hover:grayscale-0 transition-all ease-in-out duration-300"/>
                 </div>
