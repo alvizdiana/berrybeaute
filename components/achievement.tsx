@@ -3,7 +3,7 @@ export default function Achievement(){
         <div>
             <div className="flex justify-center text-center pt-14">
                 <div>
-                <h2 className="text-4xl font-playfair font-semibold text-(--primary-color) pt-7">2025 Achievement</h2>
+                <h2 className="text-4xl font-playfair font-semibold text-(--primary-color) pt-7 italic">2025 Achievement</h2>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 py-12 cursor-pointer">

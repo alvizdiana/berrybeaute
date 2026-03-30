@@ -2,11 +2,15 @@ import AboutComponent from "@/components/aboutComponent";
 
 export default function About() {
     return (
-        <div className="px-15">
-            <div className="min-h-screen pt-35">
-                <h1 className="text-3xl md:text-6xl text-center font-playfair font-semibold text-(--primary-color) py-7 mb-5">How BerryBeauté Start</h1>
-                <AboutComponent/>
+        <div className="max-w-7xl mx-auto px-6 md:px-15 pb-20">
+            <div className="min-h-[40vh] flex flex-col items-center justify-center pt-32 pb-16">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-4">How's Berrybeauté Start</span>
+                <h1 className="text-4xl md:text-7xl text-center font-playfair font-semibold text-(--primary-color) italic">
+                About Us
+                </h1>
+                <div className="w-20 h-px bg-black mt-8 opacity-20"></div>
             </div>
+            <AboutComponent/>
         </div>
     );
 }

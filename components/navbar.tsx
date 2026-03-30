@@ -59,6 +59,16 @@ export default function Navbar() {
           </span>
         </Link>
         <Link 
+          href="/article" 
+          className={`relative group text-sm md:text-base transition-colors ease-in-out duration-300
+            ${isActive('/article') ? 'text-(--active-color)' : 'hover:text-(--secondary-color)'}`}
+          >
+          Article
+          <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-(--secondary-color) transition-all duration-300 ease-in-out 
+            ${isActive('/article') ? 'w-full' : 'w-0 group-hover:w-full'}`}>
+          </span>
+        </Link>
+        <Link 
           href="/catalog" 
           className={`relative group text-sm md:text-base transition-colors ease-in-out duration-300
             ${isActive('/catalog') ? 'text-(--active-color)' : 'hover:text-(--secondary-color)'}`}

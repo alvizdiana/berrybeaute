@@ -2,7 +2,7 @@ export default function AboutBbOvv(){
     return(
         <div className="flex flex-col justify-center text-center min-h-screen pt-5">
             <div>
-            <h2 className="text-4xl font-playfair font-semibold text-(--primary-color) pt-7">About BerryBeauté</h2>
+            <h2 className="text-4xl font-playfair font-semibold text-(--primary-color) pt-7 italic">About BerryBeauté</h2>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 pt-10">
             <div className="flex flex-col px-8 pb-8 w-80 md:w-120 h-45 bg-(--additional-color)/60 border-2 border-(--secondary-color) rounded-xl">

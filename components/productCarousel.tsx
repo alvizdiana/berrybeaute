@@ -27,7 +27,7 @@ export default function ProductCarousel() {
       {/* Tombol Navigasi Kiri */}
       <button
         onClick={goToPrevious}
-        className="flex align-center absolute top-1/2 left-4 transform -translate-y-1/2 bg-(--secondary-color) text-(--additional-color) p-2 rounded-full shadow-lg hover:bg-(--primary-color) focus:outline-none"
+        className="flex align-center absolute top-1/2 left-4 transform -translate-y-1/2 bg-(--secondary-color) text-(--additional-color) p-2 rounded-full shadow-lg hover:bg-(--primary-color) focus:outline-none cursor-pointer"
       >
         ‹ {/* Panah Kiri */}
       </button>
@@ -35,7 +35,7 @@ export default function ProductCarousel() {
       {/* Tombol Navigasi Kanan */}
       <button
         onClick={goToNext}
-        className="flex align-center absolute top-1/2 right-4 transform -translate-y-1/2 bg-(--secondary-color) text-(--additional-color) p-2 rounded-full shadow-lg hover:bg-(--primary-color) focus:outline-none"
+        className="flex align-center absolute top-1/2 right-4 transform -translate-y-1/2 bg-(--secondary-color) text-(--additional-color) p-2 rounded-full shadow-lg hover:bg-(--primary-color) focus:outline-none cursor-pointer"
       >
         › {/* Panah Kanan */}
       </button>
