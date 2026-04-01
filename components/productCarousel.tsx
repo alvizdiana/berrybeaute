@@ -41,7 +41,7 @@ export default function ProductCarousel() {
       </button>
 
       {/* Indikator Dot */}
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-2">
         {products.map((_, slideIndex) => (
           <div
             key={slideIndex}

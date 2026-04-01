@@ -21,7 +21,7 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
         {promos?.map((promo) => (
           <div 
             key={promo.id} 
-            className="flex-[0_0_100%] min-w-0 relative h-75 md:h-112.5"
+            className="flex-[0_0_100%] min-w-0 relative h-45 md:h-90.5"
           >
             <Image
               src={promo.imageUrl}
@@ -32,9 +32,9 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
             />
             
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-8 text-white">
-              <h2 className="text-2xl md:text-4xl font-bold">{promo.title}</h2>
-              <p className="mt-2 text-sm md:text-lg opacity-90">{promo.description}</p>
-              <button className="mt-4 w-fit px-6 py-2 bg-(--primary-color) hover:bg-(--additional-color) text-white hover:text-(--secondary-color) cursor-pointer font-semibold rounded-full transition">
+              <h2 className="text-xl md:text-4xl font-bold">{promo.title}</h2>
+              <p className="md:mt-2 text-xs md:text-lg opacity-90">{promo.description}</p>
+              <button className="text-xs md:text-base mt-1 md:mt-4 w-fit px-3 md:px-6 py-1 md:py-2 bg-(--primary-color) hover:bg-(--additional-color) text-white hover:text-(--secondary-color) cursor-pointer font-semibold rounded-full transition">
                 Cek Promo
               </button>
             </div>

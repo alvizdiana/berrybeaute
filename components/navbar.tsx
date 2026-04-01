@@ -80,7 +80,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex items-center font-montserrat">
-        <a href="/contact" className="bg-(--primary-color) text-(--additional-color) text-sm md:text-base rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-2 md:px-4 py-1 md:py-2">Contact Us</a>
+        <a href="#contact" className="hidden md:block bg-(--primary-color) text-(--additional-color) text-sm md:text-base rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-2 md:px-4 py-1 md:py-2">Contact Us</a>
       </div>
     </nav>
   )
