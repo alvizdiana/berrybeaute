@@ -11,7 +11,7 @@ const collections = [
 ];
 
 export default function NewCollection() {
-  const [activeIndex, setActiveIndex] = useState(0); // Mulai dari 0 agar gambar 1 di paling kiri 
+  const [activeIndex, setActiveIndex] = useState(0); // Mulai dari 0 agar gambar pertama ada di paling kiri 
   const containerRef = useRef(null);
 
   return (
