@@ -45,7 +45,7 @@ export default function NewCollection() {
             style={{ 
               transform: `translateX(calc(50% - (var(--item-width) / 2) - (${activeIndex} * var(--item-width))))`,
               "--item-width": "60%", 
-            }}
+            }as React.CSSProperties}
           >
             <style jsx>{`
               @media (min-width: 768px) {
