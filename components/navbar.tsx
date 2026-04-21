@@ -38,7 +38,7 @@ export default function Navbar() {
         : "bg-(--additional-color)/60 backdrop-blur-md shadow-md" 
       }`}>
       <div>
-        <img src="/berrybeaute_full.png" alt="BerryBeaute logo" className=" w-18 md:w-30"/>
+        <img src="/berrybeaute/berrybeaute_full.png" alt="BerryBeaute logo" className=" w-18 md:w-30"/>
       </div>
       <div className="flex space-x-4 font-montserrat items-center">
         <Link 

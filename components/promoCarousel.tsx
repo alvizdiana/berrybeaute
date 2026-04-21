@@ -25,7 +25,7 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
             className="flex-[0_0_100%] min-w-0 relative h-45 md:h-90.5"
           >
             <Image
-              src={promo.imageUrl}
+              src={`/berrybeaute${promo.imageUrl}`}
               alt={promo.title}
               fill
               className="object-cover"

@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const collections = [
-  { id: 1, name: "LipBeaute Lip Liner", price: "£120", img: "/product-images/lippie_1.jpg", discount: "20% Off" },
-  { id: 2, name: "Extra Hydration Serum", price: "£120", img: "/product-images/skincare_1.jpg", discount: "30% Off" },
-  { id: 3, name: "Extra Snail Glow Serum", price: "£250", img: "/product-images/skincare_2.jpg", discount: "15% Off" },
-  { id: 4, name: "LipBeaute Hydrate Lipstick", price: "£150", img: "/product-images/lippie_3.jpg", discount: "10% Off" },
+  { id: 1, name: "LipBeaute Lip Liner", price: "£120", img: "/berrybeaute/product-images/lippie_1.jpg", discount: "20% Off" },
+  { id: 2, name: "Extra Hydration Serum", price: "£120", img: "/berrybeaute/product-images/skincare_1.jpg", discount: "30% Off" },
+  { id: 3, name: "Extra Snail Glow Serum", price: "£250", img: "/berrybeaute/product-images/skincare_2.jpg", discount: "15% Off" },
+  { id: 4, name: "LipBeaute Hydrate Lipstick", price: "£150", img: "/berrybeaute/product-images/lippie_3.jpg", discount: "10% Off" },
 ];
 
 export default function NewCollection() {

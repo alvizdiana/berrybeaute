@@ -17,7 +17,7 @@ export default function ProductSlide({ product }: ProductSlideProps) {
       {/* Bagian Kiri: Gambar Produk */}
       <div className="relative w-full w- md:w-1/2 h-64 md:h-80">
         <Image
-          src={product.imageUrl}
+          src={`/berrybeaute${product.imageUrl}`}
           alt={product.name}
           layout="fill"
           sizes="(max-width: 768px) 100vw, 50vw"
