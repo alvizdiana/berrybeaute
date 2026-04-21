@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "BerryBeauté",
   icons: {
-    icon: "/bbicon.png", // Pastikan ada tanda "/" di depan
+    icon: "/berrybeaute/bbicon.png", // Pastikan ada tanda "/" di depan
   },
 };
 
