@@ -24,12 +24,10 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
             key={promo.id} 
             className="flex-[0_0_100%] min-w-0 relative h-45 md:h-90.5"
           >
-            <Image
-              src={promo.imageUrl}
+            <img
+              src={`/berrybeaute${promo.imageUrl}`}
               alt={promo.title}
-              fill
-              className="object-cover"
-              priority={promo.id === 1}
+              className="object-cover w-full h-full"
             />
             
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-8 text-white">
