@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { products } from '@/app/data/product'; 
+import { motion } from "framer-motion";
 
 interface Product {
   id: number;
@@ -46,10 +47,30 @@ export default function ProductCatalog() {
     document.body.style.overflow = "unset";
   };
 
+  // variants untuk product grid
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3 }
+    }
+  };
+
+  // variants untuk product card
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       {/* --- FILTER BAR --- */}
-      <div className="mb-10 p-6 bg-(--additional-color) rounded-2xl flex flex-wrap gap-6 items-end shadow-sm">
+      <motion.div 
+      initial = {{ opacity: 0 , y : 20}}
+      whileInView = {{ opacity: 1 , y : 0}}
+      viewport={{ once : true}}
+      transition={{ duration : 0.5}}
+      className="mb-10 p-6 bg-(--additional-color) rounded-2xl flex flex-wrap gap-6 items-end shadow-sm">
         <div className="flex-1 min-w-50">
           <label className="block text-[10px] font-bold uppercase mb-2 text-gray-500">Search Product</label>
           <input 
@@ -98,14 +119,18 @@ export default function ProductCatalog() {
           />
           <label htmlFor="discount" className="text-xs font-bold uppercase cursor-pointer text-gray-700">Sale Only</label>
         </div>
-      </div>
+      </motion.div>
 
       {/* --- PRODUCT GRID --- */}
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {filteredProducts.map((item) => (
-            <div key={item.id} className="group flex flex-col items-center">
-              
+            <motion.div variants={itemVariants} key={item.id} className="group flex flex-col items-center">
               <div className="relative w-full aspect-3/4 rounded-4xl overflow-hidden mb-6 shadow-sm">
                 {item.discount && (
                   <div className="absolute top-4 right-4 bg-white px-3 py-1.5 rounded-full shadow-md z-10 font-bold text-xs text-black">
@@ -136,10 +161,9 @@ export default function ProductCatalog() {
                   Buy Now
                 </button>
               </div>
-
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       ) : (
         <div className="text-center py-20 text-gray-400 italic">No products found.</div>
       )}

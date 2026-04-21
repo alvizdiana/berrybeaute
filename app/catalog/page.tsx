@@ -1,5 +1,8 @@
+"use client";
+
 import ProductCard from "@/components/productCard";
 import PromoCarousel from "@/components/promoCarousel";
+import { motion } from  "framer-motion";
  
 const promosData = [
     { id: 1, title: 'Summer Sale', description: 'Get up to 30% off on selected items!', imageUrl: '/promos/summer_sale.png' },
@@ -10,12 +13,21 @@ const promosData = [
 export default function Catalog() {
     return (
         <div className="px-15 pt-25">
-            <PromoCarousel promos={promosData} />
+            <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}>
+                <PromoCarousel promos={promosData} />
+            </motion.div>
             <div className="min-h-screen pt-8 md:pt-20">
-                <div className="flex flex-col items-center justify-center">
+                <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="flex flex-col items-center justify-center">
                     <h1 className="text-3xl md:text-6xl text-center font-playfair font-semibold text-(--primary-color) py-7 mb-5 italic">Find Your Perfect Product Here</h1>
                     <div className="w-20 h-px bg-black mt-2 md:mt-5 opacity-20"></div>
-                </div>
+                </motion.div>
                 <ProductCard/>
             </div>
         </div>

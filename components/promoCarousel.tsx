@@ -4,6 +4,7 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 
 interface Promo {
   id: number;
@@ -32,11 +33,27 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
             />
             
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-8 text-white">
-              <h2 className="text-xl md:text-4xl font-bold">{promo.title}</h2>
-              <p className="md:mt-2 text-xs md:text-lg opacity-90">{promo.description}</p>
-              <button className="text-xs md:text-base mt-1 md:mt-4 w-fit px-3 md:px-6 py-1 md:py-2 bg-(--primary-color) hover:bg-(--additional-color) text-white hover:text-(--secondary-color) cursor-pointer font-semibold rounded-full transition">
-                Cek Promo
-              </button>
+              <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}>
+                <h2 className="text-xl md:text-4xl font-bold">{promo.title}</h2>
+              </motion.div>
+
+              <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="md:mt-2 text-xs md:text-lg opacity-90">{promo.description}</motion.p>
+
+              <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}>
+                <button className="text-xs md:text-base mt-1 md:mt-4 w-fit px-3 md:px-6 py-1 md:py-2 bg-(--primary-color) hover:bg-(--additional-color) text-white hover:text-(--secondary-color) cursor-pointer font-semibold rounded-full transition">
+                  Check Promo
+                </button>
+              </motion.div>
             </div>
           </div>
         ))}

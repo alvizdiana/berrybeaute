@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
 
@@ -24,11 +25,14 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
-  // Helper untuk cek apakah link sedang aktif
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className={`py-2 px-5 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+    <motion.nav 
+    initial={{ opacity: 0, y: 0 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className={`py-2 px-5 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
         ? "bg-(--additional-color)/70 backdrop-blur-md shadow-md"
         : "bg-(--additional-color)/60 backdrop-blur-md shadow-md" 
@@ -82,6 +86,6 @@ export default function Navbar() {
       <div className="flex items-center font-montserrat">
         <a href="#contact" className="hidden md:block bg-(--primary-color) text-(--additional-color) text-sm md:text-base rounded-full hover:bg-(--secondary-color) transition-colors ease-in-out duration-300 px-2 md:px-4 py-1 md:py-2">Contact Us</a>
       </div>
-    </nav>
+    </motion.nav>
   )
 }

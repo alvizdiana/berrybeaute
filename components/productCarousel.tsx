@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ProductSlide from './productSlides';
 import { products } from '@/app/data/product'; 
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductCarousel() {
   // Filter produk yang hanya memiliki code "1" atau barang baru
@@ -28,9 +29,23 @@ export default function ProductCarousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <motion.div 
+    initial={{ opacity: 0, y: 20 }} 
+    animate={{ opacity: 1, y: 0 }} 
+    transition={{ duration: 0.5 }}
+    className="relative w-full overflow-hidden">
       {/* Tampilan Slide Aktif */}
-      <ProductSlide product={filteredProducts[currentIndex]} />
+      <AnimatePresence mode="wait" initial={false}> 
+        <motion.div
+          key={currentIndex} 
+          transition={{ duration: 0.25 }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+        >
+          <ProductSlide product={filteredProducts[currentIndex]} />
+        </motion.div>
+      </AnimatePresence>
 
       {/* Tombol Navigasi Kiri */}
       <button
@@ -60,6 +75,6 @@ export default function ProductCarousel() {
           ></div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

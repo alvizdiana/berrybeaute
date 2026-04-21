@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const collections = [
   { id: 1, name: "LipBeaute Lip Liner", price: "£120", img: "/product-images/lippie_1.jpg", discount: "20% Off" },
@@ -14,7 +15,12 @@ export default function NewCollection() {
   const containerRef = useRef(null);
 
   return (
-    <div className="min-h-screen pt-5">
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen pt-5">
       <section className="py-16 overflow-hidden bg-white">
         {/* Header */}
         <div className="md:flex md:justify-between md:items-end mb-12 md:pr-10">
@@ -90,6 +96,6 @@ export default function NewCollection() {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }

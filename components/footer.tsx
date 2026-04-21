@@ -1,7 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Footer(){
     return(
         <footer id="contact">
-            <div className="bg-(--additional-color) pt-10 mt-5">
+            <motion.div 
+            initial={{ opacity: 0, y: 50 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-(--additional-color) pt-10 mt-5">
                 <div className="md:flex justify-center px-5 md:px-10">
                     <div className="md:w-2/4">
                         <h4 className="text-(--active-color) text-base md:text-xl font-semibold font-playfair italic">Find our official stores:</h4>
@@ -34,7 +42,7 @@ export default function Footer(){
                     </div>
                 </div>
                 <div className="text-center text-sm text-white mt-10 py-2 bg-(--secondary-color) font-montserrat">© 2026 Alvi Izdiana. All rights reserved.</div>
-            </div>
+            </motion.div>
         </footer>
     )
 }
