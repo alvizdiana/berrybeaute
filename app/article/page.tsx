@@ -87,6 +87,7 @@ export default function Article() {
               <Image
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

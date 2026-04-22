@@ -141,6 +141,7 @@ export default function ProductCatalog() {
                 <Image 
                   src={`/berrybeaute${item.imageUrl}`} 
                   alt={item.name} 
+                  loading="lazy"
                   fill 
                   className="object-cover transition-transform duration-500 group-hover:scale-105" 
                 />
@@ -178,6 +179,7 @@ export default function ProductCatalog() {
               <Image 
                 src={`/berrybeaute${selectedProduct.imageUrl}`} 
                 alt={selectedProduct.name} 
+                loading="lazy"
                 fill 
                 className="object-cover" 
               />

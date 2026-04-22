@@ -37,6 +37,7 @@ const AboutComponent = () => {
                       <img 
                         src={item.src} 
                         alt={item.alt} 
+                        loading='lazy'
                         className="w-full h-64 md:h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                       />
                     </div>

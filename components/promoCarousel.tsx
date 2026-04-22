@@ -3,7 +3,6 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import Image from 'next/image';
 import { motion } from "framer-motion";
 
 interface Promo {
@@ -27,6 +26,7 @@ const PromoCarousel = ({ promos = [] }: { promos?: Promo[] }) => {
             <img
               src={promo.imageUrl}
               alt={promo.title}
+              loading='lazy'
               className="object-cover w-full h-full"
             />
             

@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const collections = [
   { id: 1, name: "LipBeaute Lip Liner", price: "£120", img: "/berrybeaute/product-images/lippie_1.jpg", discount: "20% Off" },
@@ -31,10 +32,10 @@ export default function NewCollection() {
             </p>
           </div>
           <button className="flex items-center gap-2 group mt-7 md:mt-0">
-            <a href="/catalog">
+            <Link href="/catalog">
               <span className="text-base bg-(--secondary-color) text-(--additional-color) hover:bg-(--secondary-color)/70 cursor-pointer px-6 py-1 rounded-full font-semibold">All Product</span>
               <span className="text-2xl transition-transform group-hover:translate-x-2">→</span>
-            </a>
+            </Link>
           </button>
         </div>
 
@@ -78,6 +79,7 @@ export default function NewCollection() {
                       <Image 
                         src={item.img} 
                         alt={item.name} 
+                        loading="lazy"
                         fill 
                         className="object-contain" 
                         priority 
