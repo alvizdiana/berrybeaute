@@ -12,6 +12,8 @@ Responsive Design, Product Catalog with Filters, Interactive Hero Banner, Asymme
 
 ![Berrybeaute demo app](public/berrybeaute.gif)
 
+or, get your experience by click [here](https://berrybeaute.vercel.app/) instead (ﾉ◕ヮ◕)ﾉ\*:･ﾟ✧
+
 ## Getting Started
 
 First, run the development server:
