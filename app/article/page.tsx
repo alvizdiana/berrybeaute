@@ -37,7 +37,7 @@ const posts: Post[] = [
     excerpt: "The secret to radiant Korean skin that you can try at home with selected products...",
     category: "Skincare Tips",
     date: "March 15, 2024",
-    image: "/berrybeaute/article/glass_skin_tips.jpg",
+    image: "/article/glass_skin_tips.jpg",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const posts: Post[] = [
     excerpt: "Many people are confused about the order of using lip products. Let's discuss the differences...",
     category: "Makeup Tutorial",
     date: "March 12, 2024",
-    image: "/berrybeaute/article/lipstick_shade_tips.jpg",
+    image: "/article/lipstick_shade_tips.jpg",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const posts: Post[] = [
     excerpt: "Cleansing your face once is not enough. Why is double cleansing necessary?",
     category: "Beauty Routine",
     date: "March 10, 2024",
-    image: "/berrybeaute/article/double_cleansing.jpg",
+    image: "/article/double_cleansing.jpg",
   },
 ];
 

@@ -139,7 +139,7 @@ export default function ProductCatalog() {
                 )}
                 
                 <Image 
-                  src={`/berrybeaute${item.imageUrl}`} 
+                  src={item.imageUrl}
                   alt={item.name} 
                   loading="lazy"
                   fill 
@@ -177,7 +177,7 @@ export default function ProductCatalog() {
             <button onClick={closeModal} className="absolute z-20 cursor-pointer top-4 right-4 text-gray-400 hover:text-black text-xl bg-white/80 rounded-full w-10 h-10 flex items-center justify-center transition-all shadow-sm">✕</button>
             <div className="relative w-full aspect-square rounded-2xl md:rounded-4xl overflow-hidden mb-4 md:mb-6 shadow-inner bg-gray-50">
               <Image 
-                src={`/berrybeaute${selectedProduct.imageUrl}`} 
+                src={selectedProduct.imageUrl}
                 alt={selectedProduct.name} 
                 loading="lazy"
                 fill 
@@ -187,10 +187,10 @@ export default function ProductCatalog() {
             <h3 className="text-lg font-bold uppercase tracking-widest mb-2 text-black">{selectedProduct.name}</h3>
             <p className="text-sm text-gray-500">Choose your preferred online store</p>
             <div className="flex justify-center items-center gap-8 py-4">
-              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/berrybeaute/shops/amazon.svg" alt="Amazon" /></a>
-              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/berrybeaute/shops/shopee.svg" alt="Shopee" /></a>
-              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/berrybeaute/shops/tiktok.svg" alt="Tiktok" /></a>
-              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/berrybeaute/shops/tokopedia.svg" alt="Tokopedia" /></a>
+              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/shops/amazon.svg" alt="Amazon" /></a>
+              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/shops/shopee.svg" alt="Shopee" /></a>
+              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/shops/tiktok.svg" alt="Tiktok" /></a>
+              <a href="/"><img className="w-8 opacity-70 hover:opacity-100" src="/shops/tokopedia.svg" alt="Tokopedia" /></a>
             </div>
           </div>
         </div>

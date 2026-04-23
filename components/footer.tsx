@@ -15,20 +15,20 @@ export default function Footer(){
                         <h4 className="text-(--active-color) text-base md:text-xl font-semibold font-playfair italic">Find our official stores:</h4>
                         <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-(--secondary-color)">Insect Street No IV, Butterfly Mansion, District Wisteria</a>
                         <div className="mt-2 md:mt-5 flex gap-4">
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/shops/amazon.svg" alt="Berrybeaute Amazon official store" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/shops/shopee.svg" alt="Berrybeaute Shopee official store" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/shops/tiktok.svg" alt="Berrybeaute Tiktok official store" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/shops/tokopedia.svg" alt="Berrybeaute Tokopedia official store" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/shops/amazon.svg" alt="Berrybeaute Amazon official store" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/shops/shopee.svg" alt="Berrybeaute Shopee official store" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/shops/tiktok.svg" alt="Berrybeaute Tiktok official store" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/shops/tokopedia.svg" alt="Berrybeaute Tokopedia official store" /></a>
                         </div>
                     </div>
                     <div className="mt-5 md:mt-0 md:w-1/4">
                         <h4 className="text-(--active-color) text-base md:text-xl font-semibold font-playfair italic">Contact Us here:</h4>
                         <div className="mt-2 md:mt-3 flex gap-4">
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/socmed/instagram.svg" alt="Berrybeaute Instagram official Account" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/socmed/facebook.svg" alt="Berrybeaute Facebook official Account" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/socmed/email.svg" alt="Berrybeaute Email official Account" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/socmed/twitter.svg" alt="Berrybeaute Twitter official Account" /></a>
-                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/berrybeaute/socmed/whatsapp.svg" alt="Berrybeaute WhatsApp official Account" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/socmed/instagram.svg" alt="Berrybeaute Instagram official Account" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/socmed/facebook.svg" alt="Berrybeaute Facebook official Account" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/socmed/email.svg" alt="Berrybeaute Email official Account" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/socmed/twitter.svg" alt="Berrybeaute Twitter official Account" /></a>
+                            <a href="/" target="_blank" rel="noopener"><img className="w-4 md:w-5 opacity-50 hover:opacity-100" src="/socmed/whatsapp.svg" alt="Berrybeaute WhatsApp official Account" /></a>
                             
                         </div>
                     </div>

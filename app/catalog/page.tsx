@@ -5,10 +5,10 @@ import PromoCarousel from "@/components/promoCarousel";
 import { motion } from  "framer-motion";
  
 const promosData = [
-    { id: 1, title: 'Summer Sale', description: 'Get up to 30% off on selected items!', imageUrl: '/berrybeaute/promos/summer_sale.png' },
-    { id: 2, title: 'New Arrivals', description: 'Check out our latest collection of skincare products.', imageUrl: '/berrybeaute/promos/new_arrivals.png' },
-    { id: 3, title: 'Exclusive Offer', description: 'Get a free gift with every purchase over $500.', imageUrl: '/berrybeaute/promos/special_offers.png' },
-    { id: 4, title: 'Holiday Special', description: 'Enjoy special discounts during the holiday season.', imageUrl: '/berrybeaute/promos/holiday_special.png' },
+    { id: 1, title: 'Summer Sale', description: 'Get up to 30% off on selected items!', imageUrl: '/promos/summer_sale.png' },
+    { id: 2, title: 'New Arrivals', description: 'Check out our latest collection of skincare products.', imageUrl: '/promos/new_arrivals.png' },
+    { id: 3, title: 'Exclusive Offer', description: 'Get a free gift with every purchase over $500.', imageUrl: '/promos/special_offers.png' },
+    { id: 4, title: 'Holiday Special', description: 'Enjoy special discounts during the holiday season.', imageUrl: '/promos/holiday_special.png' },
 ]
 export default function Catalog() {
     return (

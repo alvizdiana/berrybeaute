@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 const AboutComponent = () => {
   const items = [
-    { id: 1, type: 'image', src: "/berrybeaute/about/about_1.jpg", alt: 'Idea' },
+    { id: 1, type: 'image', src: "/about/about_1.jpg", alt: 'Idea' },
     { id: 2, type: 'text', content: 'March 2006', desc: 'Got a random idea. Lorem ipsum dolor sit amet.' },
-    { id: 3, type: 'image', src: "/berrybeaute/about/about_2.jpg", alt: 'Discussion' },
+    { id: 3, type: 'image', src: "/about/about_2.jpg", alt: 'Discussion' },
     { id: 4, type: 'text', content: 'August 2006', desc: 'Start discussion with team. Harum eum aspernatur.' },
-    { id: 5, type: 'image', src: "/berrybeaute/about/about_3.jpg", alt: 'Product launching' },
+    { id: 5, type: 'image', src: "/about/about_3.jpg", alt: 'Product launching' },
     { id: 6, type: 'text', content: 'June 2008', desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum temporibus ullam!' },
-    { id: 7, type: 'image', src: "/berrybeaute/about/about_4.jpg", alt: 'Visit Berrybeuté first offline store'},
+    { id: 7, type: 'image', src: "/about/about_4.jpg", alt: 'Visit Berrybeuté first offline store'},
     { id: 8, type: 'text', content: 'April 2015', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit recusandae architecto ipsum voluptatibus.' },
-    { id: 9, type: 'image', src: "/berrybeaute/about/about_5.jpg", alt: 'Berrybeauté Company Building'},
+    { id: 9, type: 'image', src: "/about/about_5.jpg", alt: 'Berrybeauté Company Building'},
     { id: 10, type: 'text', content: 'November 2021', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit recusandae architecto ipsum voluptatibus.' }
   ];
 
